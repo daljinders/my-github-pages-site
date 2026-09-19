@@ -1,10 +1,9 @@
+---
 name: CI
-
 on:
   pull_request:
     branches:
       - main
-
 jobs:
   html-check:
     name: Validate HTML
@@ -12,29 +11,23 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
+          node-version: "20"
       - name: Install HTML validator
         run: npm install -g htmlhint
-
       - name: Run HTMLHint
         run: htmlhint index.html
-
   yaml-lint:
     name: Lint YAML
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Install yamllint
         run: |
           sudo apt-get update
           sudo apt-get install -y yamllint
-
       - name: Run yamllint
         run: yamllint .github/workflows
