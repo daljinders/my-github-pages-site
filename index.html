@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My GitHub Pages Site - Dhillon</title>
+  <title>Daljinder | Cloud & Platform Architect</title>
   <style>
-    /* Animated gradient background */
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
@@ -21,18 +20,20 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Navigation bar */
     nav {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.8);
       padding: 10px 20px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
+      margin: 0 20px;
+      font-weight: 600;
       transition: color 0.3s;
     }
 
@@ -40,7 +41,6 @@
       color: #00ff88;
     }
 
-    /* Header section */
     header {
       text-align: center;
       padding: 40px 20px;
@@ -61,8 +61,7 @@
       color: #555;
     }
 
-    /* Card section */
-    section {
+    section.cards {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -101,7 +100,31 @@
       color: #0072ff;
     }
 
-    /* Footer */
+    section.about, section.skills {
+      width: 80%;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section.about h2, section.skills h2 {
+      text-align: center;
+      color: #0072ff;
+    }
+
+    section.about p, section.about ul, section.skills ul {
+      font-size: 1.05em;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    section.about ul, section.skills ul {
+      list-style-type: disc;
+      margin-left: 40px;
+    }
+
     footer {
       background-color: rgba(0, 0, 0, 0.8);
       color: white;
@@ -119,9 +142,10 @@
 <body>
   <nav>
     <a href="#">Home</a>
-    <a href="#">Projects</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <header>
@@ -129,7 +153,7 @@
     <p>This page is deployed automatically using GitHub Actions.</p>
   </header>
 
-  <section>
+  <section class="cards" id="projects">
     <div class="card">
       <h3>Popular Websites</h3>
       <a href="https://google.com" target="_blank">Google</a>
@@ -146,16 +170,55 @@
       <a href="#">Azure Foundry Chatbot</a>
     </div>
 
-    <div class="card">
+    <div class="card" id="contact">
       <h3>Connect with Me</h3>
       <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-      <a href="https://twitter.com" target="_blank">Twitter</a>
-      <a href="mailto:daljinder@example.com">Email</a>
+      <a href="mailto:singhdaljinder798@gmail.com">Email Me</a>
     </div>
   </section>
 
+  <section class="about" id="about">
+    <h2>Professional Summary</h2>
+    <p>
+      Lead AI Ops Cloud Engineer & Platform Architect with 20+ years of experience building scalable,
+      secure, and resilient enterprise systems across healthcare, financial services, energy, and telecommunications.
+      Proven ability to design modern AI Ops architectures, integrate agentic workflows, and deliver cloud-native
+      automation that improves reliability and operational efficiency at enterprise scale.
+    </p>
+
+    <h3>Core Skills</h3>
+    <ul>
+      <li>Cloud Engineering & DevOps: Azure, AWS, Terraform, GitHub Actions, Azure DevOps, Ansible</li>
+      <li>Data Engineering & SQL: Advanced SQL, data modeling, performance tuning, ETL/ELT automation</li>
+      <li>Automation & Scripting: Python, Shell/Bash, PowerShell, JSON APIs, self-healing automation frameworks</li>
+      <li>Distributed Systems: Kubernetes (AKS), Kafka, Redis, microservices, event-driven architectures</li>
+      <li>Monitoring & Observability: Grafana, Prometheus, Splunk, Dynatrace, structured logging</li>
+      <li>Platform Reliability & SRE Practices: Resiliency engineering, disaster recovery, operational excellence</li>
+    </ul>
+
+    <h3>Technical Leadership</h3>
+    <p>
+      Experienced technical leader and mentor guiding globally distributed teams on architecture, SRE best practices,
+      AI Ops adoption, resiliency patterns, and modernization strategy. Skilled at translating complex technical
+      concepts into clear, actionable guidance for engineering, product, and business stakeholders.
+    </p>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2>Skills & Certifications</h2>
+    <ul>
+      <li><strong>Cloud & Data Platforms:</strong> Azure, AWS, Hybrid Cloud, Azure SQL, Cosmos DB, Databricks, AKS</li>
+      <li><strong>DevOps & IaC:</strong> Terraform, Ansible, Git, CI/CD pipelines, ARM Templates, Azure CLI, Jenkins</li>
+      <li><strong>Databases:</strong> Oracle, SQL Server, MySQL, PostgreSQL, MongoDB, Cassandra</li>
+      <li><strong>Database Technologies:</strong> Oracle RAC, Data Guard, GoldenGate, RMAN, HA/DR architectures</li>
+      <li><strong>Monitoring & Reporting:</strong> Grafana, Prometheus, Splunk, Dynatrace, Tableau, structured logging</li>
+      <li><strong>Certifications:</strong> Azure Fundamentals, Agile SAFE 6.0, Oracle Certified Professional, AI & Generative AI Learning</li>
+      <li><strong>Education:</strong> Post‑graduation in Computer & Technology, Bachelor of Engineering in Electronics</li>
+    </ul>
+  </section>
+
   <footer>
-    <p>© 2026 Daljinder Singh Dhillon | Built with ❤️ using GitHub Actions</p>
+    <p>© 2026 Daljinder | Built with ❤️ using GitHub Actions</p>
   </footer>
 </body>
 </html>
