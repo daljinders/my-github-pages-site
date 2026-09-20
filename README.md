@@ -43,4 +43,4 @@ It provides a central place for recruiters, collaborators, and engineering leade
 
 ## Live Site
 
-(Insert your GitHub Pages URL here once deployed)
+(https://daljinders.github.io/my-github-pages-site/#)
