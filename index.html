@@ -106,7 +106,9 @@
 
     /* Contact buttons */
     .contact-buttons {
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
       margin-bottom: 15px;
     }
 
@@ -115,15 +117,20 @@
       color: white;
       border: none;
       padding: 8px 14px;
-      margin: 0 6px;
       border-radius: 6px;
       cursor: pointer;
       font-weight: 600;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
     .contact-buttons button:hover {
       background-color: #00ff88;
+      transform: scale(1.05);
+    }
+
+    .contact-buttons button.active {
+      background-color: #00ff88;
+      color: #000;
     }
 
     .contact-section a {
@@ -225,8 +232,8 @@
       <h3>Contact</h3>
 
       <div class="contact-buttons">
-        <button onclick="showSection('connect')">Connect with Me</button>
-        <button onclick="showSection('websites')">Useful Websites</button>
+        <button id="btn-connect" class="active" onclick="showSection('connect')">Connect with Me</button>
+        <button id="btn-websites" onclick="showSection('websites')">Useful Websites</button>
       </div>
 
       <div id="connect" class="contact-section">
@@ -278,8 +285,22 @@
 
   <script>
     function showSection(section) {
-      document.getElementById('connect').style.display = section === 'connect' ? 'block' : 'none';
-      document.getElementById('websites').style.display = section === 'websites' ? 'block' : 'none';
+      const connect = document.getElementById('connect');
+      const websites = document.getElementById('websites');
+      const btnConnect = document.getElementById('btn-connect');
+      const btnWebsites = document.getElementById('btn-websites');
+
+      if (section === 'connect') {
+        connect.style.display = 'block';
+        websites.style.display = 'none';
+        btnConnect.classList.add('active');
+        btnWebsites.classList.remove('active');
+      } else {
+        connect.style.display = 'none';
+        websites.style.display = 'block';
+        btnConnect.classList.remove('active');
+        btnWebsites.classList.add('active');
+      }
     }
   </script>
 
