@@ -104,45 +104,6 @@
 
     .card a:hover { color: #0072ff; }
 
-    /* Contact buttons */
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 15px;
-    }
-
-    .contact-buttons button {
-      background-color: #0072ff;
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    .contact-buttons button:hover {
-      background-color: #00ff88;
-      transform: scale(1.05);
-    }
-
-    .contact-buttons button.active {
-      background-color: #00ff88;
-      color: #000;
-    }
-
-    .contact-section a {
-      display: block;
-      color: #ff5722;
-      text-decoration: none;
-      margin: 8px 0;
-      font-weight: 500;
-    }
-
-    .contact-section a:hover { color: #0072ff; }
-
     section.about {
       width: 85%;
       margin: 40px auto;
@@ -229,25 +190,9 @@
     </div>
 
     <div class="card" id="contact">
-      <h3>Contact</h3>
-
-      <div class="contact-buttons">
-        <button id="btn-connect" class="active" onclick="showSection('connect')">Connect with Me</button>
-        <button id="btn-websites" onclick="showSection('websites')">Useful Websites</button>
-      </div>
-
-      <div id="connect" class="contact-section">
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="mailto:singhdaljinder798@gmail.com">Email Me</a>
-      </div>
-
-      <div id="websites" class="contact-section" style="display:none;">
-        <a href="https://google.com" target="_blank">Google</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
-        <a href="https://portal.azure.com" target="_blank">Azure Portal</a>
-        <a href="https://aws.amazon.com/console/" target="_blank">AWS Console</a>
-        <a href="https://bing.com" target="_blank">Bing</a>
-      </div>
+      <h3>Connect with Me</h3>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="mailto:singhdaljinder798@gmail.com">Email Me</a>
     </div>
 
   </section>
@@ -282,27 +227,6 @@
   <footer>
     <p>© 2026 Daljinder | Built with ❤️ using GitHub Actions</p>
   </footer>
-
-  <script>
-    function showSection(section) {
-      const connect = document.getElementById('connect');
-      const websites = document.getElementById('websites');
-      const btnConnect = document.getElementById('btn-connect');
-      const btnWebsites = document.getElementById('btn-websites');
-
-      if (section === 'connect') {
-        connect.style.display = 'block';
-        websites.style.display = 'none';
-        btnConnect.classList.add('active');
-        btnWebsites.classList.remove('active');
-      } else {
-        connect.style.display = 'none';
-        websites.style.display = 'block';
-        btnConnect.classList.remove('active');
-        btnWebsites.classList.add('active');
-      }
-    }
-  </script>
 
 </body>
 </html>
