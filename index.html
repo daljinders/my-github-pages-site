@@ -6,10 +6,8 @@
   <title>Daljinder Singh | Cloud & Platform Architect</title>
 
   <style>
-    /* Smooth scrolling */
     html { scroll-behavior: smooth; }
 
-    /* Animated gradient background */
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
@@ -25,7 +23,6 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Navigation bar */
     nav {
       background-color: rgba(0, 0, 0, 0.85);
       padding: 12px 20px;
@@ -45,11 +42,8 @@
       transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #00ff88;
-    }
+    nav a:hover { color: #00ff88; }
 
-    /* Header section */
     header {
       text-align: center;
       padding: 50px 20px;
@@ -73,7 +67,6 @@
       margin: 0 auto;
     }
 
-    /* Card section */
     section.cards {
       display: flex;
       flex-wrap: wrap;
@@ -93,9 +86,7 @@
       transition: transform 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-    }
+    .card:hover { transform: translateY(-6px); }
 
     .card h3 {
       color: #0072ff;
@@ -111,11 +102,40 @@
       font-weight: 500;
     }
 
-    .card a:hover {
-      color: #0072ff;
+    .card a:hover { color: #0072ff; }
+
+    /* Contact buttons */
+    .contact-buttons {
+      text-align: center;
+      margin-bottom: 15px;
     }
 
-    /* About section */
+    .contact-buttons button {
+      background-color: #0072ff;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      margin: 0 6px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .contact-buttons button:hover {
+      background-color: #00ff88;
+    }
+
+    .contact-section a {
+      display: block;
+      color: #ff5722;
+      text-decoration: none;
+      margin: 8px 0;
+      font-weight: 500;
+    }
+
+    .contact-section a:hover { color: #0072ff; }
+
     section.about {
       width: 85%;
       margin: 40px auto;
@@ -172,51 +192,58 @@
 
   <section class="cards" id="projects">
 
-  <div class="card">
-    <h3>Projects</h3>
+    <div class="card">
+      <h3>Projects</h3>
 
-    <div style="margin-bottom:12px;">
-      <strong>🏗️ Enterprise Cloud Platform Architecture</strong><br>
-      Designed scalable Azure landing zones and platform services for enterprise workloads.
+      <div style="margin-bottom:12px;">
+        <strong>🏗️ Enterprise Cloud Platform Architecture</strong><br>
+        Designed scalable Azure landing zones and platform services for enterprise workloads.
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <strong>⚙️ Infrastructure-as-Code Framework</strong><br>
+        Built Terraform modules enabling consistent multi-environment cloud deployments.
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <strong>🚀 Automated Deployment Pipeline</strong><br>
+        Implemented CI/CD using Azure DevOps and GitHub Actions for cloud infrastructure delivery.
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <strong>🤖 Azure OpenAI Chatbot</strong><br>
+        Developed an intelligent assistant using Azure OpenAI and Azure Functions.
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <strong>📁 Architect Portfolio Website</strong><br>
+        Personal branding site deployed through GitHub Pages with automated workflows.
+      </div>
     </div>
 
-    <div style="margin-bottom:12px;">
-      <strong>⚙️ Infrastructure-as-Code Framework</strong><br>
-      Built Terraform modules enabling consistent multi-environment cloud deployments.
+    <div class="card" id="contact">
+      <h3>Contact</h3>
+
+      <div class="contact-buttons">
+        <button onclick="showSection('connect')">Connect with Me</button>
+        <button onclick="showSection('websites')">Useful Websites</button>
+      </div>
+
+      <div id="connect" class="contact-section">
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="mailto:singhdaljinder798@gmail.com">Email Me</a>
+      </div>
+
+      <div id="websites" class="contact-section" style="display:none;">
+        <a href="https://google.com" target="_blank">Google</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://portal.azure.com" target="_blank">Azure Portal</a>
+        <a href="https://aws.amazon.com/console/" target="_blank">AWS Console</a>
+        <a href="https://bing.com" target="_blank">Bing</a>
+      </div>
     </div>
 
-    <div style="margin-bottom:12px;">
-      <strong>🚀 Automated Deployment Pipeline</strong><br>
-      Implemented CI/CD using Azure DevOps and GitHub Actions for cloud infrastructure delivery.
-    </div>
-
-    <div style="margin-bottom:12px;">
-      <strong>🤖 Azure OpenAI Chatbot</strong><br>
-      Developed an intelligent assistant using Azure OpenAI and Azure Functions.
-    </div>
-
-    <div style="margin-bottom:12px;">
-      <strong>📁 Architect Portfolio Website</strong><br>
-      Personal branding site deployed through GitHub Pages with automated workflows.
-    </div>
-  </div>
-
-  <div class="card" id="contact">
-  <h3>Connect with Me</h3>
-  <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-  <a href="mailto:singhdaljinder798@gmail.com">Email Me</a>
-
-  <hr style="margin:20px 0; border: none; border-top: 1px solid #ddd;" />
-
-  <h3>Useful Websites</h3>
-  <a href="https://google.com" target="_blank">Google</a>
-  <a href="https://github.com" target="_blank">GitHub</a>
-  <a href="https://portal.azure.com" target="_blank">Azure Portal</a>
-  <a href="https://aws.amazon.com/console/" target="_blank">AWS Console</a>
-  <a href="https://bing.com" target="_blank">Bing</a>
-</div>
-
-</section>
+  </section>
 
   <section class="about" id="about">
     <h2>Professional Summary</h2>
@@ -248,6 +275,13 @@
   <footer>
     <p>© 2026 Daljinder | Built with ❤️ using GitHub Actions</p>
   </footer>
+
+  <script>
+    function showSection(section) {
+      document.getElementById('connect').style.display = section === 'connect' ? 'block' : 'none';
+      document.getElementById('websites').style.display = section === 'websites' ? 'block' : 'none';
+    }
+  </script>
 
 </body>
 </html>
